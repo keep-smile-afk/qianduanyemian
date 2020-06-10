@@ -1,9 +1,13 @@
+body{
+	width: 100%;
+	background-color: #e5e5e5;
+	
+}
 .containerBox {
 	width: 1200px;
-	/* height: 584.6px; */
 	margin: 0 auto;
-	/* background-color:  greenyellow; */
-	border: 1px black solid;
+	background-color:  white;
+	/* border: 1px black solid; */
 }
 
 .containerBox .container {
@@ -32,7 +36,7 @@
 	margin-left: 20px;
 	width: 600px;
 	height: 374px;
-	border: 1px black solid;
+	/* border: 1px black solid; */
 }
 
 .nameIcon {
@@ -191,8 +195,9 @@
 .nav{
 	width: 850px;
 	height: 71px;
-	border: 1px black solid;
+	border-bottom: 1px #ddd solid;
 	float: left;
+
 }
 .nav a {
 	display: inline-block;
@@ -208,30 +213,30 @@
 	width: 240px;
 	height: 70px;
 	float: right;
-	border: 1px black solid;
+	/* border: 1px black solid; */
 	font-size: 18px;
 	text-align: center;
 	line-height: 70px;
 }
 .introduce{
 	width: 850px;
-	height: 900px;
-	border: 1px black solid;
+	/* height: 900px; */
+	/* border: 1px black solid; */
 	float: left;
 }
 .classTime{
 	width: 240px;
 	height: 95px;
 	float: right;
-	border: 1px black solid;
+	/* border: 1px black solid; */
 }
 .introTeacher{
 	width: 240px;
 	height: 800px;
 	float: right;
 	margin-right: -240px;
-	margin-top: 95px;
-	border: 1px black solid;
+	margin-top: 105px;
+	/* border: 1px black solid; */
 
 }
 .teaCon{
@@ -273,4 +278,17 @@
 	width: 60px;
 	height: 30px;
 	margin-left: 13px;
+}
+.wj_title {
+    display: block;
+    width: 350px;
+    height: 100px;
+    margin: 80px auto 50px;
+    background: url(../img/118ef3ef003f2bff918ae7ca93ab65ec.png) no-repeat;
+}
+.wj_infoVideo video {
+	/* width: 850px; */
+    height: 438px;
+    position: relative;
+    margin-bottom: 20px;
 }
