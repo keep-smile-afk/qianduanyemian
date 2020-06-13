@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/order.css" />
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+	</head>
+	<body>
+		<div class="payOrder">
+			<!--订单进度-->
+			<div class="pay-pro">
+				<div class="pay-proCon" data="pay-control">
+					<div class="pay-jdL">
+						<i></i>
+						<p>确认订单信息</p>
+					</div>
+					<div class="pay-jd">
+						<span class="pay-num"></span>
+					</div>
+					<div class="pay-jdL pay-jdR">
+						<i></i>
+						<p>支付订单</p>
+					</div>
+				</div>
+			</div>
+			<div class="payCon-wap">
+				<p class="payCon-tit">课程信息</p>
+
+				<div class="payCon-con" id="payCon-con-data">
+					<!--单品-->
+					<table border="0" cellspacing="0" cellpadding="0" data-hasstudypack="1">
+						<tbody>
+							<tr>
+								<td style="border-right:solid 1px #ddd;width:908px;">
+									<div class="comList" style="display: flex;display: -webkit-flex;">
+										<em class="payCon-con-pic">
+											<a target="_blank" href="//witem.duia.com/16173.html"><img src="img/a198a09f-b194-4bbf-a245-7232a156d185.png"></a>
+											<span class="sing_picZtkimg"></span>
+										</em>
+										<p class="payCon-con-name" data-id="16173">
+											<em>
+												<a target="_blank" href="//witem.duia.com/16173.html">对啊送你60分—2020初级会计考前冲刺</a>
+											</em>
+											<span data-id="1800">
+											</span>
+										</p>
+									</div>
+
+								</td>
+								<td style="width:172px;text-align:center;"><em class="payCon-con-money">¥&nbsp;1</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="payCon-wap info" style="display:none;">
+				<div id="study" style="display: none;">
+					<p class="payCon-tit"><i>寄送地址</i></p>
+					<div class="kong" style="">
+						<div style="clear: left"><span><i></i>添加地址</span></div>
+						<p class="o-tip">* 请填写寄送地址</p>
+					</div>
+					<div class="comShow" style="cursor: pointer;display:none;" id="studyShow">
+						<div class="address">
+							<div class="name"><label>收件人：</label>
+								<p class="studyName"></p>
+							</div>
+							<div class="tel"><label>手机号：</label>
+								<p class="studyTel"></p>
+							</div>
+						</div>
+						<div class="addr"><label>地 址：</label>
+							<p style="width: 600px;">
+								<span class="addr1"></span><span class="addr2"></span><span class="addr3"></span><span class="addr4"></span>
+							</p>
+						</div>
+						<a href="javascript:void(0)" class="mes-mod">修改</a>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+			<div id="contactQQ" style="display: none;">
+				<p class="payCon-tit"><i>联系方式</i><span>（课程管家将会通过QQ与您联系）</span></p>
+				<div class="kong">
+					<div style="clear: left"><span><i></i>添加联系方式</span></div>
+					<p class="o-tip">* 请填写联系方式</p>
+				</div>
+				<div class="comShow" id="conShow" style="display: none;">
+					<div class="qq">
+						<label>QQ：</label>
+						<p id="messageQQ"></p>
+					</div>
+					<div class="info">
+						<label>验证信息：</label>
+						<p id="messageCon" style="width: auto;"></p>
+					</div>
+					<a href="javascript:void(0)" class="mes-mod">修改</a>
+				</div>
+			</div>
+			<div class="payCon-wap you" style="display: block;">
+				<div class="payConinput">
+					<div class="payCon-titBox">
+						<p class="payCon-tit on" type="1">优惠券</p>
+						<div class="payCon-titLine"></div>
+						<p class="payCon-card" type="2">粉丝金卡</p>
+					</div>
+
+
+					<div class="userCardBox">
+						<div style="overflow: hidden">
+							<input class="userCardNumIpt" type="text" placeholder="请填写卡号">
+							<div class="userCardNumTishi"></div>
+						</div>
+						<div class="userCardYanBox">
+							<input class="userCardYanIpt" type="text" placeholder="请填写验证码">
+							<div class="userCardYanText userCardYanTextClick">获取验证码</div>
+							<div class="userCardYanTishi"></div>
+						</div>
+						<div id="captcha" class="alertslide"></div>
+						<div class="userCardBtn userCardBtnClick">使用</div>
+					</div>
+
+					<div class="userYouBox" style="display: none;">
+						<div><input type="text" id="comVal"></div>
+						<a class="use" type="2">使用</a>
+						<a class="cancel">取消</a>
+						<div class="tip" id="tip"></div>
+						<div class="instal-tip">
+							<span class="instal-one">首付金额：<i></i>元</span>
+							<span class="instal-two">二期应付金额：<i></i>元</span>
+							<span class="instal-time">二期付款到期时间：<i></i></span>
+							<span class="instal-txt">
+								<i>?</i>
+								<div>成功支付首付金额，可试听班级课程；到达二期支付时间后，将无法进入班级学习</div>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="userYouBox">
+					<!-- 优惠券 -->
+					<div class="couponBox" style="display: block;">
+						<ul class="couponOption">
+							<li class="on" data-couponpage="1">可使用优惠券（<span>0</span>）</li>
+							<li>不可使用优惠券（<span>0</span>）</li>
+						</ul>
+						<div class="couponSize">
+							<!--couponUnavailable 不可用  couponPrivilege 特权  couponOrdinary 普通 couponOverdue 过期 couponUse 使用-->
+							<div class="couponPrev" style="display: none;"></div>
+							<div class="couponNext" style="display: none;"></div>
+							<div class="couponPage">
+								<div class="couponEmpty">
+									<img src="img/nocoupon.png">
+									<p>您暂时没有可用的优惠券哦~</p>
+								</div>
+							</div>
+
+							<div class="couponPageNum" style="display: none;"><span>1</span>/<span>5</span></div>
+						</div>
+
+					</div>
+
+					<div class="addPrice" style="display:none;">
+						<h3>加价购</h3>
+						<ul id="addPriceCon">
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="payCon-money" style="position: fixed; bottom: 0px; box-shadow: rgba(0, 0, 0, 0.1) 5px 0px 28px;">
+				<div class="payCon-ml">
+					<p>合计金额：<span id="montMoney">1</span><span>元</span></p>
+					<p style="display: none;" id="payYhshow"><em>优惠券：</em><span style="color:#47c88a;">-<span id="closeMoney" style="color:#47c88a;"></span>元</span></p>
+					<p class="orderYouHui" style="display: none;">老生优惠：-<span style="color:#47c88a;" id="oldMoney"></span><span style="color:#47c88a;">元</span>
+					</p>
+				</div>
+				<div class="payCon-mr">
+					<p><i>应付金额</i>：<span id="userMoney">1</span><em>元</em></p>
+					<a id="goPay">去结算</a>
+					<div class="tip"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footCenterBox">
+			<div class="footCenter">
+				<div class="footTop">
+					<div class="footTopListOne clearBox">
+						<li class="footMarginL"><a class="hoverL" href="//list.duia.com/about" target="_blank">关于我们</a></li>
+						<li><a class="hoverL" href="https://zhaopin.duia.com/web/jc/g-c/396" target="_blank">加入对啊</a></li>
+						<li><a class="hoverL" href="//list.duia.com/vip" target="_blank">会员服务</a></li>
+						<li><a class="hoverL" href="//list.duia.com/policy" target="_blank">隐私条款</a></li>
+						<li><a class="hoverL" href="//list.duia.com/agreement" target="_blank">用户协议</a></li>
+						<li><a class="hoverL" href="//list.duia.com/legal" target="_blank">法律声明</a></li>
+						<li><a class="hoverL" href="//duia.kf5.com/hc/kb/article/1043983/?from=draft" target="_blank">联系我们</a></li>
+						<li><a class="hoverL" href="//list.duia.com/cooperate" target="_blank">商务合作</a></li>
+						<li><a class="hoverL" href="//list.duia.com/complain" target="_blank">投诉建议</a></li>
+						<li class="footHelp"><a href="http://help.duia.com/hc/" target="_blank">帮助中心</a></li>
+					</div>
+					<div class="footTopListTwo clearBox">
+						<li><a>友情链接：</a></li>
+						<li><a class="footRu hoverL" href="//list.duia.com/ruHang" target="_blank">入行学院</a></li>
+						<li><a class="footKuai hoverL" href="http://www.kuaijishizi.com/" target="_blank">会计狮</a></li>
+						<li><a class="footShe hoverL" href="//list.duia.com/appDown" target="_blank">随身学</a></li>
+						<li><a class="footShe hoverL" href="http://www.istarkid.com" target="_blank">StarKids星童（儿童启蒙英语）</a></li>
+						<li><a class="footXwx hoverL" href="//list.duia.com/ownExam" target="_blank">新网校</a></li>
+					</div>
+					<div class="footQr"></div>
+				</div>
+				<div class="footBottom">
+					<div class="footBottomTit">Copyright©2013-2020 北京对啊网教育科技有限公司版权所有</div>
+					<div class="footBottomListOne clearBox" style="margin-left: 360px;">
+						<li class="footMarginL"><a href="//list.duia.com/permit" target="_blank">广播电视节目经营制作许可证（京）字第10777号</a></li>
+						<li><a href="http://rsj.beijing.gov.cn/" target="_blank">人力资源经营许可证 110401718085号</a></li>
+					</div>
+					<div class="footBottomListOne clearBox" ;>
+						<li class="footMarginL"><a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP备14031391号 -1</a></li>
+						<li><a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP证150435号</a></li>
+						<li><a href="http://www.beian.miit.gov.cn/" target="_blank">京B2-20160044</a></li>
+						<li><a href="http://gdj.beijing.gov.cn" target="_blank">出版物经营许可证新出发京批字第直170039号</a></li>
+						<li><a href="//list.duia.com/jing" target="_blank">京网文[2018] 5630-432号</a></li>
+						<li><a class="picWeb" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11030102010215" target="_blank"><i></i><span>京公网安备11030102010215号</span></a></li>
+					</div>
+					<div class="footBottomListTwo clearBox">
+						<li><a class="footIcon1Box footMarginL" href="http://www.itrust.org.cn/home/index/itrust_certifi/wm/PJ2017033001"
+							 target="_blank"><i class="footIcon1 footIcon"></i><span>网信认证</span></a></li>
+						<li><a class="footIcon2Box" href="http://www.315online.com.cn/member/315170003.html" target="_blank"><i class="footIcon2 footIcon"></i><span>网上交易保障中心</span></a></li>
+						<li><a class="footIcon4Box" href="https://credit.szfw.org/CX82030000161820170328.html" target="_blank"><i class="footIcon4 footIcon"></i><span>诚信示范单位</span></a></li>
+						<li><a class="footIcon5Box" href="https://ss.knet.cn/verifyseal.dll?sn=e14082611010753057lfxa000000&amp;ct=df&amp;a=1&amp;pa=0.5740728406235576"
+							 target="_blank"><i class="footIcon5 footIcon"></i><span>可信网站</span></a></li>
+						<li><a class="footIcon6Box" href="https://v.anquan.org/cert/site/?site=www.duia.com&amp;at=realname" target="_blank"><i
+								 class="footIcon6 footIcon"></i><span>实名认证</span></a></li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/pay.css" />
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+			<script src="jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+				$(function(){
+					$(".pay-order-xq").click(function(){
+						// alert("222222222");
+						$(".pay-ul").toggle()
+						})
+				})
+		</script>
+	</head>
+	<body>
+		<div class="payOrder">
+			<div class="pay-pro">
+				<div class="pay-proCon pay-control" data="pay-control">
+					<div class="pay-jdL">
+						<i></i>
+						<p>确认订单信息</p>
+					</div>
+					<div class="pay-jd">
+						<span class="pay-num"></span>
+					</div>
+					<div class="pay-jdL pay-jdR">
+						<i></i>
+						<p>支付订单</p>
+					</div>
+				</div>
+			</div>
+			<div class="pay-fp">
+				<div class="pay-fpOne paySucc">
+					<i class="pay-fpL"></i>
+					<div class="pay-fpR">
+						<div class="pay-success">
+							<div class="pay-sl">
+								<p class="pay-sl-tit">订单提交成功，去付款咯~</p>
+
+								<p class="pay-sl-ts">请在<span>48小时</span>内完成支付，超时后将取消订单</p>
+							</div>
+							<div class="pay-sr">
+								<div class="pay-sr-money">
+									<label>应付金额:</label>
+
+									<em>1</em><span>元</span>
+								</div>
+								<div class="pay-order-xq">订单详情<i data="pay-next" class="pay-next"></i></div>
+							</div>
+						</div>
+						<div class="pay-ul">
+							<p>订单编号：20200612161001658030761036828</p>
+							<p>商品名称：对啊送你60分—2020初级会计考前冲刺</p>
+						</div>
+						
+					<!-- 	<ul class="pay-ul" style="display: block;">
+							<li>
+								<label>订单编号：</label>
+
+								<p id="payNumber">20200612161001658030761036828</p>
+							</li>
+							<li>
+								<label>商品名称：</label>
+								<div>
+									<p>对啊送你60分—2020初级会计考前冲刺</p>
+								</div>
+							</li>
+						</ul> -->
+					</div>
+				</div>
+				
+				
+				
+				<div class="pay-orderCon">
+					<p class="pay-order-fs">选择支付方式</p>
+
+					<div class="pay-module platform" style="width: 1110px">
+						<p class="tit">支付平台</p>
+						<ul class="pay-terrace">
+							<li><a class="pay-zfb" target="_blank"></a></li>
+							<li><a class="pay-wx" target="_blank"></a></li>
+							<li style="display: none;"><a class="pay-hb" target="_blank"></a></li>
+							
+							<li><a class="pay-jdzf" target="_blank"></a></li>
+							<!--新加start-->
+							<!-- 库分期 -->
+							<li style="display: none;"><a class="pay-kfq" target="_blank"></a></li>
+							<!-- 惠学习 -->
+							<li style="display: none;"><a class="pay-hxx" target="_blank"></a></li>
+							<li style="display: none;"><a class="pay-zhongYin" id="pay-zhongYin"></a></li>
+							<li style="display: none;"><a class="pay-ms" id="pay-ms"></a></li>
+						</ul>
+					</div>
+					<div class="pay-module remittance">
+						<p class="tit">银行汇款</p>
+
+						<div class="pay-hk">
+							<div class="pay-hk-l"><i></i></div>
+							<div class="pay-hk-r">
+								<p>开户名：北京对啊网教育科技有限公司</p>
+
+								<p>开户行：招商银行股份有限公司北京静安里支行</p>
+
+								<p>账户号：1109 1209 5110 801</p>
+
+								<p class="pay-color">(请咨询老师确认汇款金额，跨行或异地汇款手续费请咨询汇款银行)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+
+
+	</body>
+	
+
+</html>

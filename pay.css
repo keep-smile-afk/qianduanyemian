@@ -1,0 +1,140 @@
+.payOrder {
+    width: 1200px;
+    margin: 0 auto 40px;
+}
+.pay-pro {
+    height: 100px;
+    background: #fff;
+}
+.pay-proCon {
+    width: 520px;
+    margin: 0 auto;
+    height: 60px;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+.pay-jdL {
+    width: 100px;
+    text-align: center;
+    float: left;
+}
+.pay-jdL i {
+    background: url(../img/pay-icon.png) no-repeat -71px 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+body{
+	width: 100%;
+	background-color: #e5e5e5;
+}
+.pay-jdL p {
+    color: #47c88a;
+    font-size: 16px;
+}
+.pay-jd {
+    width: 400px;
+    height: 4px;
+    background: #e5e5e5;
+    /* float: left; */
+    position: absolute;
+    top: 35px;
+    left: 54px;
+}
+.pay-jd .pay-num {
+    display: block;
+    height: 4px;
+    background: #47c88a;
+    width: 50%;
+}
+.pay-jdL i {
+    background: url(../img/pay-icon.png) no-repeat -71px 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+.pay-control .pay-jdR p {
+    color: #47c88a;
+}
+.pay-jdL p {
+    color: #47c88a;
+    font-size: 16px;
+}
+.pay-control .pay-jd .pay-num {
+    width: 100%;
+}
+.pay-jdR {
+    /* float: right; */
+}
+.pay-fp {
+    width: 1200px;
+    margin: 0 auto;
+}
+.pay-fpOne{
+	width: 100%;
+	/* height: 300px; */
+	box-sizing: border-box;
+	padding: 40px 60px;
+	margin-top: 20px;
+	background: #fff;
+}
+.pay-fpL {
+    float: left;
+    width: 65px;
+    height: 70px;
+    background: url(../img/pay-icon.png) no-repeat 0 -72px;
+    display: block;
+    margin-right: 40px;
+}
+.paySucc .pay-fpL {
+    background-position: 0 0;
+    width: 70px;
+    height: 70px;
+}
+.pay-fpR {
+    width: 970px;
+	display: inline-block;
+}
+.pay-sl {
+	display: inline-block;
+}
+.pay-sl-ts span{
+	color: #47C88A;
+}
+.pay-sr {
+    float: right;
+    font-size: 14px;
+}
+.pay-ul{
+	width: 100%;
+	display: none;
+	border-top: 1px solid lightgrey;
+}
+
+/* 
+// */
+.pay-order-xq {
+    color: #47c88a;
+    text-align: right;
+    cursor: pointer;
+	margin-top: 15px;
+}
+.pay-order-xq .pay-next {
+    background-position: -106px -2px;
+}
+.pay-order-xq i {
+    width: 11px;
+    height: 7px;
+    background: url(../img/pay-icon.png) no-repeat -106px -9px;
+    display: inline-block;
+    margin-left: 5px;
+}
+/* address, cite, dfn, em, var, i {
+    font-style: normal;
+} */
+li{
+	list-style: none;
+}
+
+
