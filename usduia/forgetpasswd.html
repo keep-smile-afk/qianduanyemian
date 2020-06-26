@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对啊网-登录</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+	</head>
+	<body>
+		<div id="root" class="root">
+			<!-- 头标题盒子 -->
+			<div class="headBigBox" id="headBox">
+				<div class="headCenterBox">
+					<div class="headCenter clearBox">
+						<a class="duiaLogo" href="index.html">
+							<img src="//common.duia.com/resource/img/common/t-logo.svg" />
+						</a>
+						<div class="headNav" id="sku-head-nav">
+							<div class="checkSku skuNavList">选择课程</div>
+							<a class="skuNavList" href="studycenter.html">学习中心</a>
+							<a class="skuNavList" href="#" target="_blank">投诉建议</a>
+							<!-- <img src="img/haohaoxuexi.png" /> -->
+						</div>
+						<div>
+							<a class="people" href="//list.duia.com/people" target="_blank"></a>
+						</div>
+						<div class="userBox">
+							<div class="loginState">
+								<div class="userName">
+									<a class="float_1" href="login.html">登录</a>
+								</div>
+								<div class="loginOut">
+									退出
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div class="style__wrapper-2Gdg9">
+					<div class="style__middle-NqSR6">
+						<div class="style__xlLogo-158ch"></div>
+						<div class="style__right-3ao_Q">
+							<div>
+								<div>
+									<div>
+										<div class="web-input__container-2X7rq">
+											<input id="username" class type="text" placeholder="输入用户名" maxlength="11" value/>
+										</div>
+										<div class="web-input__errorTxt-3w6tj"></div>
+									</div>
+									<div>
+										<div class="web-input__code-3H2mW">
+											<div class="web-input__container-2X7rq">
+												<!-- <input class type="text" placeholder="输入手机号" maxlength="6" value/> -->
+											</div>
+											<!-- <div class="web-input__codeBut-287_J false">验证码</div> -->
+										</div>
+									<!-- 	<div class="web-input__errorTxt-3w6tj"></div> -->
+									</div>
+									<div>
+										<div class="web-input__container-2X7rq">
+											<input id="password" class type="password" placeholder="输入密码" maxlength="20" autocomplete="new-password" value/>
+										</div>
+										<div class="web-input__errorTxt-3w6tj"></div>
+									</div>
+									<div>
+										<div class="web-input__container-2X7rq">
+											<input id="newpassword" class type="password" placeholder="重新输入密码" maxlength="20" autocomplete="on" value/>
+										</div>
+										<div class="web-input__errorTxt-3w6tj"></div>
+									</div>
+									<div class="web-input__button-3QxXI">
+										<button id="btn1" onclick="change()" style="border: none;">确定修改密码</button>
+								    </div>
+									<div class="style__loginOrRegiser-rfdxT">
+										<a href="regist.html">登录注册</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script>
+		   function change(){	
+		   var username=$("#username").val();
+		   var password=$("#password").val();
+		   var newpassword=$("#newpassword").val();
+		   // alert(username+password+newpassword);
+		   $.ajax({
+		    url:"http://localhost:8080/duia_war/forgetpassword",
+		    type:"post",
+		    //获取input的value---jquery
+		   	data:"username="+username+"&newpassword="+newpassword,
+		    dataType:"json",
+		    success:function(info){
+		      // alert(info)
+			  if(info==true){
+				  window.location.href="login.html";
+			  }else{
+				 // document.getElementById("msg").style.display="inline";//显示隐藏的p标签，id为msg
+			    }
+			}
+		   });
+		  }
+		  </script>
+		
+	</body>

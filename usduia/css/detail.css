@@ -1,0 +1,535 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	background-color: #e5e5e5;
+	
+}
+
+
+.center{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.headBigBox{
+	height: 60px;
+	width: 100%;
+	/* background-color:gainsboro; */
+}
+.headBigBox .headCenter{
+	height: 60px;
+	width: 90%;
+	margin: 0 auto;
+	/* background-color: bisque; */
+}
+.headBigBox .duiaLogo{
+	width: 215px;
+	margin: 0 50px 0 0;
+	float: left;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+}
+button{
+	border: none;
+	outline: none;
+}
+.duiaLogo img{
+	border: none;
+	vertical-align: middle;
+}
+.headNav{
+	float: left;
+}
+.headNav img{
+	height: 60px;
+	width: 480px;
+	border: none;
+}
+.headNav .skuNavList{
+	float: left;
+	margin: 0 45px 0 0;
+	line-height: 60px;
+	color: #666;
+}
+.headBigBox .people{
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 500px;
+	/* margin-right: 15px; */
+	background: url(../img/xiazai.png) no-repeat;
+	background-size: 70px 60px;
+}
+.userBox{
+	float: right;
+	margin-top: 20px;
+}
+.userBox .loginState{
+	color: #666666;
+	font-size: 14px;
+}
+.userBox .loginState .userName{
+	float: left;
+}
+.float_1{
+	color: #666666;
+	float: left;
+}
+.userBox .loginState .loginOut{
+	margin-left: 10px;
+	cursor: pointer;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.containerBox {
+	width: 1200px;
+	margin: 0 auto;
+	background-color:  white;
+	/* border: 1px black solid; */
+}
+
+.containerBox .container {
+	/* padding: 30px; */
+	/* width: 1140px; */
+}
+
+.breadcrumb {
+	font-size: 12px;
+	color: #999;
+	/* line-height: 1; */
+	background-color: white;
+	/* padding: 0px; */
+}
+
+
+
+.leftImg {
+	float: left;
+	width: 460px;
+	height: 374px;
+}
+.img{
+	width: 420px;
+	height: 324px;
+}
+
+.descInfo {
+	float: right;
+	margin-left: 20px;
+	width: 600px;
+	height: 374px;
+	/* border: 1px black solid; */
+}
+
+.nameIcon {
+	width: 37px;
+	height: 33px;
+	margin-right: 10px;
+}
+
+.nameDesc {
+	font-size: 24px;
+	color: #333;
+	line-height: 33px;
+}
+
+.adverInfo {
+	font-size: 14px;
+	color: #ff6029;
+	line-height: 24px;
+	margin-top: 10px;
+}
+
+.introInfo {
+	font-size: 14px;
+	/* color: #999; */
+	line-height: 24px;
+	margin-top: 5px;
+}
+
+.priceBox {
+	width: 600px;
+	height: 108.4px;
+	padding: 15px 15px 23px;
+	background: #f5f5f5;
+
+}
+
+.priceText {
+	width: 56px;
+	margin: 20px 20px 0 0;
+	font-size: 14px;
+	color: #999;
+	line-height: 1;
+	float: left;
+}
+
+.priceReality {
+	/* width: 150px; */
+	float: right;
+	margin-right: 372px;
+	display: inline;
+}
+
+.float-Left {
+	font-size: 24px;
+	color: #ff6029;
+	margin: 12px 10px 0 0;
+}
+
+.float-Right {
+	font-size: 36px;
+	color: #ff6029;
+	margin-top: 1px;
+}
+
+.pricePreview {
+	margin-right: 270px;
+	margin-top: -30px;
+	font-size: 14px;
+	color: #999;
+	line-height: 1;
+
+}
+
+.chooseRoom {
+	margin-top: 22px;
+}
+
+.buy {
+	margin-top: -30px;
+	margin-right: 10px;
+	font-size: 14px;
+	color: #999;
+	line-height: 1;
+}
+
+.timeBox {
+
+	font-size: 14px;
+	color: #999;
+	margin-bottom: -30px;
+	width: 600px;
+
+}
+
+.qb-time-info span{
+	color: #ff6029;
+}
+
+.endTime {
+	font-size: 14px;
+	color: #999;
+	float: left;
+	margin-right: 30px;
+}
+
+.chooseBox {
+	width: 600px;
+	height: 50px;
+	padding: 15px 15px 23px;
+}
+
+.checkClass {
+	font-size: 14px;
+	line-height: 30px;
+	color: #999;
+	float: left;
+	margin-right: 20px;
+}
+
+.vaildDate {
+	color: #47c88a;
+	border: 1px solid #47c88a;
+	float: left;
+	font-size: 14px;
+	margin-right: 30px;
+	padding: 0 12px;
+}
+
+.inputBox {
+	
+	width: 180px;
+	height: 42px;
+	background: #ff6029;
+	cursor: pointer;
+
+}
+
+.buyclass {
+	width: 100%;
+	float: left;
+	color: white;
+	line-height: 42px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.pay {
+	/* height: 13.6px; */
+	color: #999;
+	width: 180px border: 1px black solid;
+	margin-top:5px;
+}
+
+.payclass {
+	font-size: 14px;
+	align-content: center;
+	margin-left: 20px;
+	margin-bottom: -15px;
+}
+.nav{
+	width: 850px;
+	height: 71px;
+	border-bottom: 1px #ddd solid;
+	float: left;
+
+}
+.on{
+	/* background-color: #47C88A; */
+	/* border-bottom: 1px solid green; */
+}
+.nav a {
+	display: inline-block;
+	font-size: 18px;
+	width: 120px;
+	height: 71px;
+	text-align: center;
+	line-height:71px;
+	text-decoration: none;
+	color: black;
+}
+.classIntro{
+	width: 240px;
+	height: 70px;
+	float: right;
+	/* border: 1px black solid; */
+	font-size: 18px;
+	text-align: center;
+	line-height: 70px;
+}
+.introduce{
+	width: 850px;
+	/* height: 900px; */
+	/* border: 1px black solid; */
+	float: left;
+}
+.introduce .item{
+	display: none;
+}
+.classTime{
+	width: 240px;
+	height: 95px;
+	float: right;
+	/* border: 1px black solid; */
+}
+.introTeacher{
+	width: 240px;
+	height: 800px;
+	float: right;
+	margin-right: -240px;
+	margin-top: 105px;
+	/* border: 1px black solid; */
+
+}
+.teaCon{
+	padding: 20px 0;
+    text-align: center;
+    width: 230px;
+    position: relative;
+    background: #f6f6f6;
+	margin-top: 60px;
+}
+.teaImg{
+	    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -35px;
+    margin: 0 auto;
+
+	
+}
+.teaName{
+	margin: 25px 0 20px;
+    color: #333;
+    font-size: 20px;
+}
+.teaBrief{
+	color: #999;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    line-height: 18px;
+}
+.interview span{
+	display: block;
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	margin-left: 13px;
+	margin-top: 15px;
+}
+.wj_title {
+    display: block;
+    width: 350px;
+    height: 100px;
+    margin: 80px auto 50px;
+    background: url(../img/118ef3ef003f2bff918ae7ca93ab65ec.png) no-repeat;
+}
+.wj_infoVideo video {
+	/* width: 850px; */
+    height: 438px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.wj_title_2 {
+    display: block;
+    width: 350px;
+    height: 100px;
+    margin: 80px auto 50px;
+    background:url(../img/118ef3ef003f2bff918ae7ca93ab65ec.png) no-repeat;
+}
+/* 课程安排 */
+.plan {
+    border: 1px solid #ddd;
+    background: #fcfcfc;
+    font-size: 20px;
+}
+
+.mulu{
+	display: flex;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+.mulu .mullu-left{
+	flex:15 ;
+	margin-bottom: 0;
+}
+.icon-mulu:before{
+	font-size: 28px;
+	color: #2DB379;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -5px;
+}
+.mulu .mullu-right{
+	flex:1 ;
+	margin-bottom: 0;
+}
+
+.timu-item{
+	border-top: 1px solid #ddd;
+    padding: 15px 35px;
+    color: #666;
+	
+    overflow: hidden;
+    line-height: 40px;
+}
+.timu-item1{
+	display: flex;
+	font-size: 17px;
+}
+
+.timu-left{
+	flex: 13;
+	border-bottom: 1px solid #f2f2f2;
+}
+.timu-right{
+	flex: 1;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+/* 报班答疑 */
+.wj_title_3 {
+    display: block;
+    width: 350px;
+    height: 100px;
+    margin: 80px auto 50px;
+    background: url(../img/118ef3ef003f2bff918ae7ca93ab65ec.png) no-repeat;
+}
+/* 学员评价 */
+.wj_title_4 {
+    display: block;
+    width: 350px;
+    height: 100px;
+    margin:80px 250px 50px 250px;
+    background: url(../img/118ef3ef003f2bff918ae7ca93ab65ec.png) no-repeat 0 -302px;
+}
+
+
+.student_inventory {
+   margin: 0 auto;
+}
+.stuImg{
+	overflow: hidden; 
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 16px;
+	margin-left: 10px;
+	float: left;
+}
+.divInfo{
+	width: 85%;
+    padding: 22px 0 24px;
+    border-top: 1px solid #efefef;
+	float: right;
+	font-size: 16px;
+	
+}
+.stu_info{
+	display: flex;
+}
+.nickname{
+	flex: 6;
+	color: #999;
+    line-height: 16px;
+    padding-right: 20px;
+}
+.icon-xingxing{
+	flex: 26;
+	color: darkorange;
+	line-height: 16px;
+}
+.inven_time{
+	flex: 1;
+	    right: 0;
+    top: 0;
+    font-size: 14px;
+    color: #bfbfbf;
+    line-height: 16px
+}
+.stu_desc{
+	font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    padding-top: 16px;
+   
+}

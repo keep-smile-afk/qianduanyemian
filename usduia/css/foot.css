@@ -1,0 +1,198 @@
+head {
+	width: 100%;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style-type: none
+}
+div {
+    display: block;
+}
+.footTop {
+    height: 90px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+.footTop .footTopListOne {
+    width: 100%;
+    height: 23px;
+}
+.footTop .footTopListOne li:first-child {
+    margin-left: 0;
+}
+.footTop li a {
+    color: #333;
+    font-size: 14px;
+    line-height: 14px;
+    float: left;
+}
+.footTop .hoverL {
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+}
+.footTop .footTopListOne li {
+    margin-left: 40px;
+}
+
+.footTop .footTopListOne li, .footTop .footTopListTwo li {
+    float: left;
+}
+.footTop .footTopListTwo {
+    margin-top: 10px;
+    width: 100%;
+}
+.footTop li .footRu {
+    margin-left: 26px;
+    color: #666;
+}
+.footTop li .footKuai {
+    margin-left: 40px;
+    color: #666;
+}
+.footTop li .footShe {
+    margin-left: 54px;
+    color: #666;
+}
+.footTop li .footXwx {
+    margin-left: 45px;
+    color: #666;
+}
+.footTop .footTopListOne .footHelp a {
+    width: 90px;
+    margin-top: -7px;
+    height: 30px;
+    background-color: #47c88a;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 6px;
+    color: #fff;
+}
+.footTop .footQr {
+    width: 201px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    background: url(../img/erweima.png) no-repeat;
+}
+.footCenterBox {
+    margin-top: 40px;
+    background: #fff;
+	height: 285px;
+}
+.footCenter {
+    width: 1200px;
+	height: 225px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px 0 20px;
+}
+.footCenterBox a{
+	text-decoration: none;
+}
+.footBottom .footIcon4 {
+    height: 26px;
+    width: 30px;
+    background-position: -132px -2px;
+    margin: 7px 0 0 32px;
+}
+.footBottom .footIcon5 {
+    height: 26px;
+    width: 26px;
+    background-position: -182px -2px;
+    margin: 7px 0 0 48px;
+}
+.footBottom .footIcon6 {
+    height: 25px;
+    width: 28px;
+    background-position: -228px -2px;
+    margin: 7px 0 0 47px;
+}
+.footBottom .picWeb i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    background: #000;
+    float: left;
+    margin-top: -4px;
+    background: url(../img/police.png) no-repeat;
+}
+.footBottom .picWeb span {
+    margin-left: 24px;
+}
+.footBottom .footIcon1 {
+    height: 28px;
+    width: 28px;
+    background-position: 0 0;
+    margin: 6px 0 0 47px;
+}
+.footBottom .footIcon {
+    display: block;
+    background: url(../img/footIcon.png) no-repeat;
+    float: left;
+}
+.footBottom .footBottomListTwo li a span {
+    margin-left: 10px;
+}
+.footBottom .footIcon2 {
+    height: 22px;
+    width: 19px;
+    background-position: -47px -3px;
+    margin: 9px 0 0 24px;
+}
+.footBottom {
+    margin-top: 20px;
+}
+.footBottom, .footBottom a {
+    font-size: 12px;
+    color: #666;
+}
+.footBottom .footBottomTit {
+    text-align: center;
+    line-height: 12px;
+}
+.footBottom .footBottomListOne {
+    margin: 10px 0 0 107px;
+}
+.footBottom .footBottomListOne li a {
+    float: left;
+    line-height: 12px;
+}
+.footBottom .footBottomListTwo li:first-child a {
+    margin-left: 0;
+}
+.footBottom .footBottomListOne li {
+    float: left;
+    margin-left: 18px;
+}
+.footBottom .footBottomListTwo {
+    width: 83.5%;
+    margin: auto;
+}
+.footBottom .footBottomListTwo li {
+    float: left;
+}
+.footBottom .footBottomListTwo li a {
+    margin-left: 12px;
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid #f0f0f0;
+    width: 188px;
+    margin-top: 19px;
+}
+.footBottom .footBottomListTwo li:first-child a {
+    margin-left: 0;
+}
+.clearBox:after {
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}

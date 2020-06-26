@@ -1,0 +1,154 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #eff0f1;
+}
+.topbar{
+	background-color: gray;
+}
+.topbar_wrap{
+	width: 950px;
+	margin: 0 auto;
+	color: white;
+	font-size: 13px;
+	text-align: right;
+}
+.topbar_wrap span{
+	display: inline-block;
+	padding: 4px 15px;
+}
+.topbar_wrap .question{
+	color: white;
+	border-left: 1px solid dimgrey;
+}
+.pay_header{
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+}
+.header_container{
+	width: 950px;
+	margin: 0 auto;
+}
+.header_container span{
+	height: 20px;
+	color: #676d70;
+	font-size: 16px;
+	font-family: "Microsoft YaHei",微软雅黑,"宋体";
+	border-left: 1px solid #676d70;
+	margin-top: 5px;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	position: absolute;
+	top: 0;	
+}
+.pay_container{
+	width: 950px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+.pay_container .partner{
+	position: relative;
+}
+.partner_item{
+	margin-bottom: 15px;
+}
+.partner_item p{
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.partner_item span{
+	color: deepskyblue;
+}
+.hidden_item{
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+.partner strong{
+	color: orangered;
+	font-size: 23px;
+}
+.order_price{
+	position: absolute;
+	right: 21px;
+	bottom: 50px;
+}
+
+.order_detial{
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 700;
+	padding: 5px;
+	background-color: darkgray;
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+}
+.main_center{
+	width: 100%;
+	height: 470px;
+	display: flex;
+	border-top: 3px solid darkgray;
+	border-bottom: 3px solid darkgray;
+}
+.center_left{
+	flex: 5;
+	background-color: white;
+}
+.qrArea{
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+}
+.qrArea strong{
+	font-size: 23px;
+	color: orangered;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.qrArea a{
+	font-size: 10px;
+	color: gray;
+}
+.center_right{
+	flex: 1;
+	background-color: #e6e6e6;
+}
+.right_item{
+	width: 100%;
+	padding-top: 200px;
+	/* background-color: #00BFFF; */
+	text-align: center;
+}
+.right_item button{
+	width: 106px;
+	height: 40px;
+	/* padding: 5px; */
+	color: white;
+	font-size: 12px;
+	border-radius: 5px;
+	border: 1px solid #0fa4db;
+	margin-top: 25px;
+	background-color: #00aeef;
+}
+
+.container_footer{
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.copyright{
+	color: #676D70;
+	text-align: center;
+}
+.pay_footer{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}

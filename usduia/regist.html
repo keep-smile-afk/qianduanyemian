@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对啊网-登录</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script type="text/javascript" src="//cstaticdun.126.net/load.min.js"></script>
+	</head>
+	<body>
+		<div id="root" class="root">
+			<!-- 头标题盒子 -->
+			<div class="headBigBox" id="headBox">
+				<div class="headCenterBox">
+					<div class="headCenter clearBox">
+						<a class="duiaLogo" href="index.html">
+							<img src="//common.duia.com/resource/img/common/t-logo.svg" />
+						</a>
+						<div class="headNav" id="sku-head-nav">
+							<div class="checkSku skuNavList">选择课程</div>
+							<a class="skuNavList" href="studycenter.html">学习中心</a>
+							<a class="skuNavList" href="#" target="_blank">投诉建议</a>
+							<!-- <img src="img/haohaoxuexi.png" /> -->
+						</div>
+						<div>
+							<a class="people" href="//list.duia.com/people" target="_blank"></a>
+						</div>
+						<div class="userBox">
+							<div class="loginState">
+								<div class="userName">
+									<a class="float_1" href="login.html">登录</a>
+								</div>
+								<div class="loginOut">
+									退出
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div class="style__wrapper-2Gdg9">
+					<div class="style__middle-NqSR6">
+						<div class="style__xlLogo-158ch"></div>
+						<div class="style__right-3ao_Q">
+							<div>
+								<!-- <div> -->
+									<div class="web-input__container-2X7rq">
+										<!-- <div class="style__tagOne-UXpJj">
+											<img src="img/one.png" alt>
+											<div>手机号</div>
+										</div>
+										<div class="style__tagTwo-BIvtt">
+											<img src="img/two.png" alt>
+											<div>验证</div>
+										</div>
+										<div class="style__tagThree-1AqIy">
+											<img src="img/three.png" alt>
+											<div>成功</div>
+										</div> -->
+										<input id="username" class type="text" placeholder="输入用户名" maxlength="11" value/>
+									</div>
+									<div class="web-input__container-2X7rq">
+										
+									</div>
+									<div class="web-input__container-2X7rq">
+										
+									</div>
+								<!-- </div> -->
+								<div class="style__container-Gt6LQ">
+									<div>
+										<div class="web-input__container-2X7rq">
+											<input id="password" class type="text" placeholder="输入密码" maxlength="11" value/>
+										</div>
+										<!-- <div class="web-input__errorTxt-3w6tj"></div> -->
+									</div>
+									<div class="style__notice-2vwhX">
+										<input  type="checkbox" checked/>
+										<span>阅读并同意</span>
+										<a href="//list.duia.com/agreement" target="_blank">对啊网用户注册协议、</a>
+										<a href="//list.duia.com/policy" target="_blank">隐私条款</a>
+									</div>
+									<div  class="web-input__button-3QxXI">
+										<button id="btn1" onclick="register()" style="border: none;">立即注册</button>
+									</div>
+									<div class="style__register_login-14abp">
+										<a href="saomalogin.html">已有账号，去登录</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script>
+		   function register(){	
+		   var username=$("#username").val();
+		   var password=$("#password").val();
+		   // alert(username+password);
+		   $.ajax({
+		    url:"http://localhost:8080/duia_war/register",
+		    type:"post",
+		    //获取input的value---jquery
+		   	data:"username="+username+"&password="+password,
+		    dataType:"json",
+		    success:function(info){
+		      // alert(info)
+			  if(info==true){
+				  window.location.href="login.html";
+			  }else{
+				 // document.getElementById("msg").style.display="inline";//显示隐藏的p标签，id为msg
+			    }
+			}
+		   });
+		  }
+		  </script>
+		   
+	</body>
+</html>

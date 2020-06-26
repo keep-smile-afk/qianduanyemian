@@ -1,0 +1,189 @@
+.CourseDate{
+	width: 100%;
+	height: 200px;
+	background-color:seagreen
+}
+.courseDate_userDateBox-2CjHj{
+	width: 90%;
+	height: 200px;
+	margin: 0 auto;
+	/* background-color: lightgreen; */
+}
+.courseDate-userBox-3b2LA{
+	width: 30%;
+	height: 114px;
+	float: left;
+	margin-top: 35px;
+	margin-left: 80px;
+	/* background-color: cadetblue; */
+	display: flex;
+}
+.courseDate_userImg-2tk_c{
+	width: 114px;
+	height: 114px;
+	/* background-color: #666666; */
+}
+.courseDate_userImg-2tk_c img{
+	width: 90%;
+	border: 4px solid rgba(253,255,254,.18);
+	border-radius: 50%;
+	/* background-color: blue; */
+}
+.courseDate_userTextBox-jpCYp{
+	width: 160px;
+	float: left;
+	color: white;
+	font-size: 20px;
+	margin-top: 25px;
+	margin-left: 40px;
+	/* background-color: brown; */
+}
+.courseDate_calendarBox-26kP8{
+	width: 30%;
+	height: 150px;
+	margin-top: 20px;
+	margin-right: 120px;
+	/* background-color: lawngreen; */
+	float: right;
+}
+.Calendar__calendarTop-2uQ0y{
+	width: 150px;
+	height: 30px;
+	margin: 24px auto 0;
+	/* background-color: #0000FF; */
+}
+.Calendar__monthsL-1B2L_{
+	float: left;
+	width: 15px;
+	height: 13px;
+	/* background-color: #5F9EA0; */
+	margin-top: 5px;
+}
+.Calendar__monthsL-1B2L_ img{
+	width: 15px;
+	height: 13px;
+	
+}
+.Calendar__currentDate-Ss4hO{
+	font-size: 18px;
+	width: 115px;
+	height: 18px;
+	float: left;
+	text-align: center;
+	margin-top: 4px;
+	color: white;
+	/* background-color: salmon; */
+}
+.Calendar__monthsR-1ypZa{
+	float: left;
+	width: 15px;
+	height: 13px;
+	/* background-color: #5F9EA0; */
+	margin-top: 5px;
+}
+.Calendar__monthsR-1ypZa img{
+	width: 15px;
+	height: 13px;
+}
+.Calendar__dayIcon-2E_HH{
+	border: 1px solid #fff;
+	color: white;
+}
+ul li{
+	list-style: none;
+}
+.Calendar__weekBox-VIG5D{
+	width: 260px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 auto;
+	color: white;
+	/* background-color: #7FFFD4; */
+}
+.Calendar__weekList-TqXvs{
+	width: 20px;
+	margin-left: 2px;
+	margin-right: 14px;
+	float: left;
+}
+.Calendar__weekBottom-TB2Ds{
+	width: 330px;
+	height: 1px;
+	margin: 0 auto;
+	background: hsla(0,0%,100%,.24);
+}
+.Calendar__listBox-15giI{
+	width: 300px;
+	height: 50px;
+	/* background-color: #F5DEB3; */
+	margin: 0 auto;
+	color: white;
+}
+.Calendar__listDayBox-2T4hp{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-top: 3px;
+	margin-left: 2px;
+	margin-right: 14px;
+}
+.UserMainBox{
+	width: 100%;
+	height: 440px;
+	background-color: white;
+	padding-top: 20px;
+	background-color: whitesmoke;
+}
+.UserWidth{
+	width: 90%;
+	height: 440px;
+	margin: 0 auto;
+	background-color: white;
+}
+.UserSideLeft{
+	width: 20%;
+	height: 440px;
+	float: left;
+	background-color: white;
+}
+.UserSidebar{
+	width: 210px;
+	padding: 42px 0 3px;
+	
+}
+.UserSidebar li{
+	text-align: center;
+	cursor: pointer;
+	height: 40px;
+	font-size: 22px;
+	margin-bottom: 10px;
+	color:darkslategray;
+}
+.kongge{
+	width: 7%;
+	height: 440px;
+	float: left;
+	background-color:whitesmoke
+}
+.UserCouRight{
+	width: 100%;
+	height: 440px;
+	/* margin-left: 10%; */
+	background-color: white;
+}
+.UserCouNav{
+	margin-left: 30px;
+	height: 80px;
+	/* float: left; */
+	
+	display: flex;
+	border-bottom: 1px solid #eee;
+	/* background-color: #2F4F4F; */
+}
+.UserCouNav li{
+	margin-left: 40px;
+	line-height:80px ;
+	font-size: 20px;
+	list-style: none;
+	color:darkslategray;
+}

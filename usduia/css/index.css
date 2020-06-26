@@ -1,0 +1,183 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.headBigBox{
+	height: 60px;
+	width: 100%;
+	/* background-color:gainsboro; */
+}
+.headBigBox .headCenter{
+	height: 60px;
+	width: 90%;
+	margin: 0 auto;
+	/* background-color: bisque; */
+}
+.headBigBox .duiaLogo{
+	width: 215px;
+	margin: 0 50px 0 0;
+	float: left;
+}
+a{
+	text-decoration: none;
+	/* flex: left; */
+}
+.duiaLogo img{
+	border: none;
+	vertical-align: middle;
+}
+.headNav{
+	float: left;
+}
+.headNav img{
+	height: 60px;
+	width: 480px;
+	border: none;
+}
+.headNav .skuNavList{
+	float: left;
+	margin: 0 45px 0 0;
+	line-height: 60px;
+	color: #666;
+}
+.headBigBox .people{
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 500px;
+	background: url(../img/xiazai.png) no-repeat;
+	background-size: 70px 60px;
+}
+.userBox{
+	float: right;
+	margin-top: 20px;
+}
+.userBox .loginState{
+	color: #666666;
+	font-size: 14px;
+}
+.userBox .loginState .userName{
+	float: left;
+}
+.float_1{
+	color: #666666;
+	float: left;
+}
+.userBox .loginState .loginOut{
+	margin-left: 10px;
+	cursor: pointer;
+	float: left;
+}
+/* 一大块列表 */
+.skuListBox{
+	width:1150px;
+	height: 420px;
+	background-color: whitesmoke;
+	margin-top: 60px;
+	margin-left: 200px;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0.9;
+	z-index: 200;
+}
+
+.skuListBox .skuListTit{
+	line-height: 3;
+	/* float: left; */
+	width: 120px;
+	text-align: right;
+	color: #666;
+	font-weight: 900;
+}
+.skuListBox .skuNameBox{
+	float: left
+	margin-left: 5px;
+	padding-right: 5px;
+}
+.skuListBox .skuName span{
+	line-height: 3;
+	margin: 0 10px;
+}
+.skuListclearBox{
+	display: flex;
+}
+
+.skuName{
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+/* 完结 */
+.index_container{
+	width: 100%;
+	height: 740px;
+	/* background-color: peru; */
+}
+.index_one{
+	height: 740px;
+}
+.index_mainColor img{
+	width: 100%;
+	height: 140px;
+	border: none;
+}
+.index_mainSku{
+	text-align: center;
+	width: 100%;
+	height: 90%;
+	margin-top: 25px;
+	position: absolute;
+	/* background-color: burlywood; */
+}
+.index_listType{
+	width: 18%;
+	height: 260px;
+	float: left;
+	/* background-color: chartreuse; */
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+.index_skuType img{
+	width: 80px;
+	min-height: 80px;
+	border: none;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	
+}
+.index_typeName{
+	font-size: 25px;
+	margin: 0 0 0 15px;
+}
+.index_skuList .index_typeName{
+	transform: translateY(-620%);
+	color: rgb(53,212,143);
+}
+.index_skuList{
+	height: 150px;
+	text-align: center;
+	visibility: hidden;
+	color: rgb(53,212,143);
+}
+.index_list{
+	justify-content: center;
+	transform: translateY(-100%);
+}
+.index_list a{
+	color: rgb(53,212,143);
+	border-color: rgb(53,212,143);
+	width:43%;
+	height: 40px;
+	cursor: pointer;
+	line-height: 40px;
+	display: inline-block;
+	margin: 8px 5px 0;
+	border: 1px solid ;
+	border-radius: 100px;
+	text-decoration: none;
+	font-size: 13px;
+}
+

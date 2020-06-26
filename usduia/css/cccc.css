@@ -1,0 +1,233 @@
+body {
+	width: 100%;
+	background-color: #e5e5e5;
+}
+
+head {
+	width: 100%;
+}
+
+.center{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.headBigBox{
+	height: 60px;
+	width: 100%;
+	/* background-color:gainsboro; */
+}
+.headBigBox .headCenter{
+	height: 60px;
+	width: 90%;
+	margin: 0 auto;
+	/* background-color: bisque; */
+}
+.headBigBox .duiaLogo{
+	width: 215px;
+	margin: 0 50px 0 0;
+	float: left;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+}
+button{
+	border: none;
+	outline: none;
+}
+.duiaLogo img{
+	border: none;
+	vertical-align: middle;
+}
+.headNav{
+	float: left;
+}
+.headNav img{
+	height: 60px;
+	width: 480px;
+	border: none;
+}
+.headNav .skuNavList{
+	float: left;
+	margin: 0 45px 0 0;
+	line-height: 60px;
+	color: #666;
+}
+.headBigBox .people{
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 500px;
+	/* margin-right: 15px; */
+	background: url(../img/xiazai.png) no-repeat;
+	background-size: 70px 60px;
+}
+.userBox{
+	float: right;
+	margin-top: 20px;
+}
+.userBox .loginState{
+	color: #666666;
+	font-size: 14px;
+}
+.userBox .loginState .userName{
+	float: left;
+}
+.float_1{
+	color: #666666;
+	float: left;
+}
+.userBox .loginState .loginOut{
+	margin-left: 10px;
+	cursor: pointer;
+	float: left;
+}
+
+
+
+
+
+
+.list__courseList-1G4kr {
+    overflow: hidden;
+    width: 1270px;
+    margin: 0 auto;
+}
+.list__skuTitle-2gcdf {
+    width: 1200px;
+    position: relative;
+}
+.list__skuTitle-2gcdf h2 {
+    letter-spacing: 4px;
+    font-size: 32px;
+    line-height: 32px;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto 40px;
+    position: relative;
+    height: 32px;
+}
+.list__skuTitle-2gcdf h2>p {
+    width: 186px;
+    left: 50%;
+    position: absolute;
+    margin-left: -93px;
+}
+.list__skuTitle-2gcdf .list__leftLine-2mrFX {
+    background: #000;
+    float: left;
+    height: 2px;
+    width: 20px;
+    margin: 17px 0 0;
+}
+.list__skuTitle-2gcdf h2 span {
+    float: left;
+    margin-left: 21px;
+}
+.list__skuTitle-2gcdf .list__rightLine-1ZkKS {
+    background: #000;
+    float: right;
+    height: 2px;
+    width: 20px;
+    margin: 17px 0 0;
+}
+.list__listUl-2RTin {
+    min-height: 254px;
+}
+li, ol, ul {
+    list-style: none;
+}
+.list__listUl-2RTin>li {
+    width: 282px;
+    height: 230px;
+    float: left;
+    cursor: pointer;
+    margin: 0 24px 24px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.list__listUlA-_rxZD {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+.list__listSpecial-o-TBe {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 84px;
+    height: 38px;
+    background: url(../img/tubiao.png)no-repeat 0 -1px;
+    z-index: 2;
+}
+.list__listCover-1UGaD {
+    position: absolute;
+    top: 135px;
+    border-left: 282px solid #000;
+    border-left: 282px solid rgba(0,0,0,.3);
+    border-top: 24px solid transparent;
+    height: 95px;
+}
+.list__listInfo-1qcNT {
+    top: 134px;
+    position: absolute;
+    left: 0;
+    width: 258px;
+    color: #fff;
+    line-height: 1.5;
+    text-shadow: 0 0 4px rgba(0,0,0,.64);
+    padding: 30px 12px 0;
+}
+.list__coursePrice-1t3a7 {
+    position: absolute;
+    bottom: 10px;
+    right: 13px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0;
+}
+.list__coursePrice-1t3a7>span {
+    font-size: 28px;
+}
+.list__listIcon-1V9Fq {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 84px;
+    height: 40px;
+    background: url(../img/tubiao2.png) no-repeat;
+    z-index: 2;
+}
+.list__tipIcon-2NGE2.list__sBg3-2N755 {
+    background-position: -100px -100px;
+}
+.list__tipIcon-2NGE2 {
+    background: url(../img/skuIcon.fc2d3bd6.png);
+    height: 24px;
+    width: 40px;
+}
+.list__tipIcon-2NGE2.list__sBg1-25mTc {
+    background-position: 0 -100px;
+}
+.list__price-zt9-g {
+    position: absolute;
+    bottom: -1px;
+    right: 14px;
+    font-size: 16px;
+}
+.list__tipIcon-2NGE2 {
+    background: url(../img/skuIcon.fc2d3bd6.png);
+    height: 24px;
+    width: 40px;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/cccc.css" />
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+
+		<script type="text/javascript">
+			$(function() {
+
+				//轮播图
+				$.ajax({
+					url: "http://localhost:8080/duia_war/allCarousel",
+					success: function(carousels) {
+						var img = '';
+						for (var i = 0; i < carousels.length; i++) {
+							var carousel = carousels[i];
+							
+							if (i == 0) {
+								img += '<div class="item active"><a href=""><img src="img/carousel/' + carousel.carouselurl +
+									'" alt="..."></a><div class="carousel-caption"></div></div>'
+							} else {
+								img += '<div class="item "><a href=""><img src="img/carousel/' + carousel.carouselurl +
+									'" alt="..."></a><div class="carousel-caption"></div></div>'
+							}
+						}
+						$("#items").append(img);
+					}
+				});
+				$.ajax({
+					url: "http://localhost:8080/duia_war/getAllCourse",
+					success: function(courses) {
+						var img = "";
+						var img1 = "";
+						for (var i = 0; i < courses.length; i++) {
+							var image = courses[i].coursecover;
+							var id = courses[i].id;
+							if (i <= courses.length / 2) {
+								img +=
+									'<li comid="16173"><a class="list__listUlA-_rxZD" target="_blank" href="detail.html"><img src="img/' +
+									image +
+									'" alt=""><span class="list__listSpecial-o-TBe"></span><div class="list__listCover-1UGaD"></div><div  class="list__listInfo-1qcNT"><div id="' +
+									id + '" class="list__listName-2sYCA">' +
+									courses[i].coursename +
+									'</div><div><p class="list__aboutPeople-2BiDD"><span>限购50000人</span></p></div></div><div><p class="list__coursePrice-1t3a7">￥<span>' +
+									courses[i].price + '</span></p></div></a></li>';
+							}
+						}
+						$('#course ul').append(img);
+					}
+				});
+
+				$.ajax({
+					url: "http://localhost:8080/duia_war/getAllCourse",
+
+
+					success: function(courses) {
+						var img = "";
+						for (var i = 0; i < courses.length; i++) {
+							var image = courses[i].coursecover;
+							var id = courses[i].id;
+							if (i > courses.length / 2) {
+								img +=
+									'<li><a class="list__listUlA-_rxZD" target="_blank" href="play.html"><img src="img/' +
+									image +
+									'"><div class="list__listCover-1UGaD"></div><div class="list__listInfo-1qcNT"><p id="' + id +
+									'" class="list__listName-2sYCA">' +
+									courses[i].coursename +
+									'</p><p class="list__aboutPeople-2BiDD"><span>2616924</span>人在学</p></div><p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg1-25mTc"></p></a></li>'
+
+							}
+						}
+						$('#video ul').append(img);
+						//鼠标移到名字上
+						var id = "";
+						//$(".list__listName-2sYCA").mouseover(function(e) {
+							//var aa = e.target;
+							//console.log(aa);
+
+							// 根据主键查询课程
+							$(function() {
+								$(".list__listName-2sYCA").click(function() {
+									id = $(this).attr("id");
+									 window.localStorage.setItem('courseid',id)
+									 // window.localStorage.setItem('name',uname)
+									var idd=window.localStorage.getItem('courseid');
+									// alert(idd);
+									if(id<9){
+										window.location.href="detail.html?id="+id;
+									}else{
+										window.location.href="play.html?id="+id;
+									}
+																		
+								})
+							})
+					},
+				});
+
+
+
+
+
+			});
+		</script>
+	</head>
+	<body>
+		<!-- <div class="head">
+			<div style="height: 80px; background-color: #A9A9A9;"></div>
+				
+			
+		</div> -->
+		
+		<div class="headBigBox" id="headBox">
+			<div class="headCenterBox">
+				<div class="headCenter clearBox">
+					<a class="duiaLogo" href="index.html">
+						<img src="//common.duia.com/resource/img/common/t-logo.svg" />
+					</a>
+					<div class="headNav" id="sku-head-nav">
+						<div class="checkSku skuNavList">选择课程</div>
+						<a class="skuNavList" href="studycenter.html">学习中心</a>
+						<a class="skuNavList" href="#" target="_blank">投诉建议</a>
+						<!-- <img src="img/haohaoxuexi.png" /> -->
+					</div>
+					<div>
+						<a class="people" href="//list.duia.com/people" target="_blank"></a>
+					</div>
+					<div class="userBox">
+						<div class="loginState">
+							<div class="userName">
+								<!-- <a class="float_1" href="login.html">登录</a> -->
+							</div>
+							<div class="loginOut">
+								退出
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="carousel-example-generic" class="carousel slide" carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox" id="items">
+				<!-- <div class="item active">
+					<a href="">
+						<img src="img/carousel/1.png" alt="...">
+					</a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="item">
+					<a href="">
+						<img src="img/carousel/2.png" alt="...">
+					</a>
+					<div class="carousel-caption">
+					</div>
+				</div>
+				<div class="item">
+					<a href="">
+						<img src="img/carousel/3.png" alt="...">
+					</a>
+					<div class="carousel-caption">
+					</div>
+				</div> -->
+			</div>
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<div id="course">
+			<div class="list__courseList-1G4kr">
+				<div class="list__skuTitle-2gcdf">
+					<h2>
+						<p><span class="list__leftLine-2mrFX"></span><span>系统班</span><span class="list__rightLine-1ZkKS"></span></p>
+					</h2>
+				</div>
+				<ul class="list__listUl-2RTin clearBox">
+					<!-- <li comid="16173">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16173.html">
+							<img src="img/system/1.png" alt="">
+							<span class="list__listSpecial-o-TBe"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">对啊送你60分—2020初级会计考前冲刺</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>限购50000人</span></p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>1</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="14052">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/14052.html">
+							<img src="img/system/2.png"alt="">
+							<span class="list__listSpecial-o-TBe"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">初级会计职称万人模考大赛</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>限购50000人</span></p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>1</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="16556">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16556.html">
+							<img src="img/system/3.png" alt="">
+							<span class="list__listSpecial-o-TBe"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">直击财税建筑管理—解决项目核算难题</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>1277</span>人购买</p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7"><span>99</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="16587">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16587.html">
+							<img src="img/system/4.png" alt="">
+							<span class="list__listSpecial-o-TBe"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">初级会计名师训练营第三期(筱文老师)</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>限购2000人</span></p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>299</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="8550">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/8550.html">
+							<img src="img/system/5.png" alt="">
+							<span class="list__listIcon-1V9Fq"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">初级会计-基础通关班(学生版)</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>12050</span>人购买</p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>990</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="16560">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16560.html">
+							<img src="img/system/6.png" alt="">
+							<span class="list__listIcon-1V9Fq"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA"> 初级会计-考前无忧班</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>8076</span>人购买</p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>1280</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="16580">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16580.html">
+							<img src="img/system/7.png" alt="">
+							<span class="list__listIcon-1V9Fq"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">初级会计-四步必过班</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>159666</span>人购买</p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>2180</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="16578">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16578.html">
+							<img src="img/system/8.png" alt="">
+							<span class="list__listIcon-1V9Fq"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">老会计实操做账班</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>9097</span>人购买</p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>5280</span></p>
+							</div>
+						</a>
+					</li>
+					<li comid="16579">
+						<a class="list__listUlA-_rxZD" target="_blank" href="//witem.duia.com/16579.html">
+							<img src="img/system/9.png" alt="">
+							<span class="list__listIcon-1V9Fq"></span>
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<div class="list__listName-2sYCA">初级会计-高薪就业班</div>
+								<div>
+									<p class="list__aboutPeople-2BiDD"><span>36040</span>人购买</p>
+								</div>
+							</div>
+							<div>
+								<p class="list__coursePrice-1t3a7">￥<span>5580</span></p>
+							</div>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<div id="video">
+			<div class="list__courseList-1G4kr">
+				<div class="list__skuTitle-2gcdf">
+					<h2>
+						<p><span class="list__leftLine-2mrFX"></span><span>视频课</span><span class="list__rightLine-1ZkKS"></span></p>
+					</h2>
+				</div>
+				<ul class="list__listUl-2RTin clearBox">
+					<!-- <li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/870">
+							<img src="img/video/1.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">【免费】2020年初级经济法基础-初级会计职称基础班</p>
+								<p class="list__aboutPeople-2BiDD"><span>2616924</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg1-25mTc"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/798">
+							<img src="//tu.duia.com/contentPic/20191114/5e84bbb8-795f-4ed7-ba8e-eed92ab5f062.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">【免费】2020年初级会计实务-初级会计职称基础班</p>
+								<p class="list__aboutPeople-2BiDD"><span>3734810</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg1-25mTc"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/1798">
+							<img src="//tu.duia.com/contentPic/20191128/80a4227f-eb0f-4812-af29-0df18caa4a6f.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">2020年新大纲初级会计实务预科班</p>
+								<p class="list__aboutPeople-2BiDD"><span>4446</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg3-2N755"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/1344">
+							<img src="//tu.duia.com/contentPic/20191114/d121603d-2d3c-4452-9b56-1885262a708b.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">2020年新大纲初级经济法基础预科班</p>
+								<p class="list__aboutPeople-2BiDD"><span>43075</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg3-2N755"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/1128">
+							<img src="//tu.duia.com/contentPic/20191114/9741c51d-e3ed-4e72-aab1-af96de6bd4c0.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">2020年工业企业真账实操</p>
+								<p class="list__aboutPeople-2BiDD"><span>23735</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg3-2N755"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/1127">
+							<img src="//tu.duia.com/contentPic/20191114/124bacd2-a4c8-4050-bd2a-e12515d6bcbe.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">2020年基础Excel，让工作更加高效</p>
+								<p class="list__aboutPeople-2BiDD"><span>25872</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg3-2N755"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/1129">
+							<img src="//tu.duia.com/contentPic/20191114/32f66166-b6f0-4de2-9bda-1c4f394d0e53.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">2020年事业单位真账实操</p>
+								<p class="list__aboutPeople-2BiDD"><span>15727</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg3-2N755"></p>
+						</a>
+					</li>
+					<li>
+						<a class="list__listUlA-_rxZD" target="_blank" href="//live.duia.com/video/play/1757">
+							<img src="//tu.duia.com/contentPic/20191114/0ed9e52c-a2d8-4cc0-88ec-0ed966ea314f.jpg">
+							<div class="list__listCover-1UGaD"></div>
+							<div class="list__listInfo-1qcNT">
+								<p class="list__listName-2sYCA">2020年实操基础必修课</p>
+								<p class="list__aboutPeople-2BiDD"><span>5742</span>人在学</p>
+							</div>
+							<p class="list__tipIcon-2NGE2 list__price-zt9-g list__sBg3-2N755"></p>
+						</a>
+					</li>
+				</ul> -->
+			</div>
+		</div>
+	</body>
+</html>

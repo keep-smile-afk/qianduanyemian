@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/play.css" />
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<script type="text/javascript">
+
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var url = window.location.href;
+				var arr = url.split("=");
+				$.ajax({
+					url: "http://localhost:8080/duia_war/coursess/10",
+					success: function(course) {
+						var chapters = course.chapterList;
+						var div1 = '';
+						var div2 = '';
+						var div3 = '';
+						var chapter1Sections = [];
+						var count = 0;
+						for (; count < chapters.length; count++) {
+							var ch1 = chapters[count].chapter;
+							// alert(ch1);
+							for (var i = 0; i < chapters.length; i++) {
+								if (ch1 == chapters[i].chapter) {
+									chapter1Sections.push(chapters[i].section);
+
+									count++;
+								}
+							}
+							// alert(chapter1Sections);
+							//渲染
+							//console.log(chapter1Sections.length);
+							if (chapter1Sections.length > 0) {
+								div1 = '<div class="con"><p class="conTitle" title="总论"><em></em><span>' + ch1 +
+									'</span></p><div class="lecture-list">';
+								for (var m = 0; m < chapter1Sections.length; m++) {
+									div2 += '<a  href="javascript:void(0)"><i></i><span>' +
+										chapter1Sections[m] + '</span></a>';
+
+								}
+								div3 = '</div></div>';
+								chapter1Sections.splice(0, chapter1Sections.length);
+								//alert(chapter1Sections);
+								$(".content .menu").append(div1 + div2 + div3);
+								div2 = '';
+
+							}
+						}
+						$(".menu:first a:first").addClass("status2");
+						var arr = [];
+						for (var a = 0; a < chapters.length; a++) {
+							arr.push(chapters[a].section);
+						}
+						$(".menu a").click(function() {
+							$(this).addClass("status2").siblings().removeClass("status2");
+							$(this).parents(".con").siblings().find("a").removeClass("status2");
+							// var index = $(this).index();
+							var m = $(this).text();
+							var i = 0;
+							for (; i < arr.length;i++) {
+								if (arr[i] == $(this).text()) {
+									// alert(arr[i]);
+									$("video").eq(i).show().siblings().css("display", "none");
+								}
+
+							}
+
+						});
+					},
+
+				});
+				$.ajax({
+					url: "http://localhost:8080/duia_war/coursess/10",
+					success: function(course) {
+						var span = '';
+						var title = course.coursename;
+						// alert(title);
+						span += '<span>' + title + '</span>';
+						$("p[class='t-width-p']").append(span);
+					}
+				})
+				$.ajax({
+					url: "http://localhost:8080/duia_war/coursess/10",
+					success: function(courses) {
+						var m = '';
+						var chapters = courses.chapterList;
+						// alert(chapters);
+						for (var j = 0; j < chapters.length; j++) {
+							var video = chapters[j].videourl
+							if (j == 0) {
+								m +=
+									'<video Class="theVideo" controls loop="false" poster:"http://cloud.video.taobao.com//play/u/2455221099/p/1/e/6/t/1/50071310842.mp4"><source src="' +
+									video + '"type="video/mp4"></source></video>';
+
+							} else {
+								m +=
+									'<video  Class="theVideo" controls loop="false" poster:"http://cloud.video.taobao.com//play/u/2455221099/p/1/e/6/t/1/50071310842.mp4"><source src="' +
+									video + '"type="video/mp4"></source></video>';
+							}
+						}
+						$('.h-video').append(m);
+						$(".h-video video:first").css("display", 'block');
+					},
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="t-width">
+				<div class="clear fl t-logo-wrap">
+					<a class="t-logo " href="//www.duia.com" target="_blank">
+						<img src="//common.duia.com/resource/img/common/free-video-logo.svg" width="215">
+					</a>
+					<p class="t-width-p">
+						<i></i>
+						<!-- <span>【免费】2020年初级经济法基础-初级会计职称基础班:前言</span> -->
+					</p>
+				</div>
+				<div class="right clear">
+					<div class="login">
+						<div class="loginNo" id="userLogin">
+							<a href="javascript:void(0)" onclick="signIn(_sku,'video_index')">登录</a>|
+							<a href="javascript:void(0)" onclick="register(_sku,'video_index')">注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="section">
+				<div class="conLeft">
+					<div class="video">
+						<div class="course">
+							<div class="h-video">
+								<!-- <video class="theVideo" controls loop="false" poster:"http://cloud.video.taobao.com//play/u/2455221099/p/1/e/6/t/1/50071310842.mp4">
+							     <source src="https://cm11-c110-2.play.bokecc.com/flvs/ca/QxIOZ/ult1rVVkbc-30.mp4?t=1592564950&key=BD09D277A8327050A6B9EFB5000FDB8A&tpl=10" type="video/mp4"></source>
+							    </video> -->
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="conRight s-show">
+					<div class="title">
+						<a class=" on" href="javascript:void(0)">目录</a>
+					</div>
+					<div class="content">
+						<div class="menu">
+							<!-- <div class="con">
+								<p class="conTitle" title="总论">
+									<em></em>
+									<span>总论</span>
+								</p>
+								<div class="lecture-list">
+									<a class="status2 lecture-one" href="javascript:void(0)" title="法和法律">
+										<i></i>
+										<span>法和法律</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="法律事实">
+										<i></i>
+										<span>法律事实</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="法律关系">
+										<i></i>
+										<span>法律关系</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="法律责任">
+										<i></i>
+										<span>法律责任</span>
+									</a>
+								</div>
+							</div>
+							<div class="con">
+								<p class="conTitle" title="会计法律制度">
+									<em></em>
+									<span>会计法律制度</span>
+								</p>
+								<div class="lecture-list">
+									<a class="status3 lecture-one" href="javascript:void(0)" title="会计法律制度概述">
+										<i></i>
+										<span>会计法律制度概述</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="会计监督">
+										<i></i>
+										<span>会计监督</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="会计机构和会计人员">
+										<i></i>
+										<span>会计机构和会计人员</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="会计职业道德">
+										<i></i>
+										<span>会计职业道德</span>
+									</a>
+								</div>
+							</div>
+							<div class="con">
+								<p class="conTitle" title="支付结算法律制度">
+									<em></em>
+									<span>支付结算法律制度</span>
+								</p>
+								<div class="lecture-list">
+									<a class="status3 lecture-one" href="javascript:void(0)" title="支付结算概述">
+										<i></i>
+										<span>支付结算概述</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="银行结算账户1">
+										<i></i>
+										<span>银行结算账户1</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="银行结算账户2">
+										<i></i>
+										<span>银行结算账户2</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="银行结算账户2">
+										<i></i>
+										<span>银行结算账户3</span>
+									</a>
+								</div>
+							</div>
+							<div class="con">
+								<p class="conTitle" title="增值税、消费税法律制度">
+									<em></em>
+									<span>增值税、消费税法律制度</span>
+								</p>
+								<div class="lecture-list">
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="税收与税收法律关系+税法要素1">
+										<i></i>
+										<span>税收与税收法律关系+税法要素1</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="税法要素2+现行税种与征收机关">
+										<i></i>
+										<span>税法要素2+现行税种与征收机关</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="增值税纳税人和扣缴义务人">
+										<i></i>
+										<span>增值税纳税人和扣缴义务人</span>
+									</a>
+									<a class="status3 lecture-one" href="javascript:void(0)" title="增值税税收优惠">
+										<i></i>
+										<span>增值税税收优惠</span>
+									</a>
+								</div>
+							</div>
+							<div class="con">
+								<p class="conTitle" title="企业所得税、个人所得税法律制度">
+									<em></em>
+									<span>企业所得税、个人所得税法律制度</span>
+								</p>
+
+								<div class="lecture-list">
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="企业所得税纳税人、征税对象">
+										<i></i>
+										<span>企业所得税纳税人、征税对象</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="企业所得税税率、应纳税所得额的计算1">
+										<i></i>
+										<span>企业所得税税率、应纳税所得额的计算1</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="企业所得税应纳税所得额的计算2">
+										<i></i>
+										<span>企业所得税应纳税所得额的计算2</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="企业所得税应纳税所得额的计算3">
+										<i></i>
+										<span>企业所得税应纳税所得额的计算3</span>
+									</a>
+								</div>
+							</div>
+							<div class="con">
+								<p class="conTitle" title="其他税收法律制度">
+									<em></em>
+									<span>其他税收法律制度</span>
+								</p>
+
+								<div class="lecture-list">
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="房产税法律制度">
+										<i></i>
+										<span>房产税法律制度</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="契税法律制度">
+										<i></i>
+										<span>契税法律制度</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="土地增值税法律制度">
+										<i></i>
+										<span>土地增值税法律制度</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="城镇土地使用税法律制度">
+										<i></i>
+										<span>城镇土地使用税法律制度</span>
+									</a>
+								</div>
+							</div>
+							<div class="con">
+
+								<p class="conTitle" title="税收征收管理法律制度">
+									<em></em>
+									<span>税收征收管理法律制度</span>
+								</p>
+
+								<div class="lecture-list">
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="税收征收管理法概述1">
+										<i></i>
+										<span>税收征收管理法概述1</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="税收征收管理法概述2">
+										<i></i>
+										<span>税收征收管理法概述2</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="税务管理 1">
+										<i></i>
+										<span>税务管理 1</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="税务管理 2">
+										<i></i>
+										<span>税务管理 2</span>
+									</a>
+								</div>
+							</div>
+							<div class="con last">
+								<p class="conTitle" title="劳动合同与社会保险法律制度">
+									<em></em>
+									<span>劳动合同与社会保险法律制度</span>
+								</p>
+
+								<div class="lecture-list">
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="劳动关系与劳动合同及订立概述">
+										<i></i>
+										<span>劳动关系与劳动合同及订立概述</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="劳动合同订立的形式及劳动合同的效力">
+										<i></i>
+										<span>劳动合同订立的形式及劳动合同的效力</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="劳动合同期限">
+										<i></i>
+										<span>劳动合同期限</span>
+									</a>
+
+									<a class="status3 lecture-one" href="javascript:void(0)" title="工作时间和休息休假">
+										<i></i>
+										<span>工作时间和休息休假</span>
+									</a>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</body>
+</html>

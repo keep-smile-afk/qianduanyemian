@@ -1,0 +1,404 @@
+body{
+	width: 100%;
+	background-color: #e5e5e5;
+}
+
+.center{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.headBigBox{
+	height: 60px;
+	width: 100%;
+	/* background-color:gainsboro; */
+}
+.headBigBox .headCenter{
+	height: 60px;
+	width: 90%;
+	margin: 0 auto;
+	/* background-color: bisque; */
+}
+.headBigBox .duiaLogo{
+	width: 215px;
+	margin: 0 50px 0 0;
+	float: left;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+}
+button{
+	border: none;
+	outline: none;
+}
+.duiaLogo img{
+	border: none;
+	vertical-align: middle;
+}
+.headNav{
+	float: left;
+}
+.headNav img{
+	height: 60px;
+	width: 480px;
+	border: none;
+}
+.headNav .skuNavList{
+	float: left;
+	margin: 0 45px 0 0;
+	line-height: 60px;
+	color: #666;
+}
+.headBigBox .people{
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 500px;
+	/* margin-right: 15px; */
+	background: url(../img/xiazai.png) no-repeat;
+	background-size: 70px 60px;
+}
+.userBox{
+	float: right;
+	margin-top: 20px;
+}
+.userBox .loginState{
+	color: #666666;
+	font-size: 14px;
+}
+.userBox .loginState .userName{
+	float: left;
+}
+.float_1{
+	color: #666666;
+	float: left;
+}
+.userBox .loginState .loginOut{
+	margin-left: 10px;
+	cursor: pointer;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+li {
+    list-style: none;
+}
+/* 头部 */
+.payOrder {
+    width: 1200px;
+    margin: 0 auto 40px;
+}
+.pay-pro {
+    height: 100px;
+    background: #fff;
+}
+.pay-proCon {
+    width: 520px;
+    margin: 0 auto;
+    height: 60px;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+.pay-jdL {
+    width: 100px;
+    text-align: center;
+    float: left;
+}
+.pay-jdL i {
+    background: url(../img/pay-icon.png) no-repeat -71px 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+.pay-jdL p {
+    color: #47c88a;
+    font-size: 16px;
+}
+.pay-jd {
+    width: 400px;
+    height: 4px;
+    background: #e5e5e5;
+    float: left;
+    position: absolute;
+    top: 35px;
+    left: 54px;
+}
+.pay-jd .pay-num {
+    display: block;
+    height: 4px;
+    background: #47c88a;
+    width: 50%;
+}
+.pay-jdR {
+    float: right;
+}
+
+element.style {
+}
+.pay-jdR i {
+    background-position: -71px -32px;
+}
+.pay-jdL i {
+    background: url(../img/pay-icon.png) no-repeat -71px 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+/* 课程信息 */
+.payCon-wap {
+    width: 1080px;
+    padding: 23px 60px 60px 60px;
+    background: #fff;
+    margin-top: 20px;
+}
+.payCon-tit {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 24px;
+}
+.payCon-con table {
+    border: 1px solid #ddd;
+    width: 100%;
+    border-bottom: 0;
+    text-align: center;
+    color: #999;
+    border-collapse: collapse;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.payCon-con tr {
+    font-size: 14px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.payCon-con tr td {
+    text-align: left;
+    line-height: 80px;
+    font-family: Arial;
+}
+.comList {
+    padding: 30px;
+    position: relative;
+}
+.payCon-con-pic {
+    display: inline-block;
+    width: 109px;
+    height: 90px;
+    margin: 0 20px 0 0;
+    background: url(../img/paypic.png) no-repeat;
+    position: relative;
+    border-radius: 4px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+.payCon-con-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.sing_picZtkimg {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: url(../img/ztk.png) no-repeat;
+    width: 62px;
+    height: 24px;
+}
+.payCon-con td p {
+    color: #333;
+}
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.payCon-con-name em {
+    font-size: 16px;
+    line-height: 16px;
+}
+.payCon-con-name em a {
+    color: #333;
+}
+.payCon-con-name span {
+    line-height: 16px;
+}
+.payCon-con-money {
+    color: #fd6029;
+}
+address, cite, dfn, em, var, i {
+    font-style: normal;
+}
+.payCon-wap {
+    width: 1080px;
+    padding: 40px 60px 60px 60px;
+    background: #fff;
+    margin-top: 20px;
+}
+.payCon-titBox {
+    overflow: hidden;
+}
+.payCon-card.on, .payCon-tit.on {
+    color: #333;
+}
+.payCon-titBox .payCon-tit {
+    float: left;
+    cursor: pointer;
+}
+.payCon-titLine {
+    width: 1px;
+    margin: 5px 10px 0;
+    height: 12px;
+    background: #dcdcdc;
+    float: left;
+}
+.payCon-card {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 24px;
+    float: left;
+    cursor: pointer;
+}
+.userCardBox {
+    display: none;
+    position: relative;
+}
+.couponPage {
+    overflow: hidden;
+}
+.couponOption {
+    overflow: hidden;
+    margin: 6px -40px 39px;
+}
+.couponOption li.on {
+    color: #47c88a;
+    border-bottom: solid 1px #47c88a;
+}
+.couponOption li {
+    float: left;
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 8px;
+    margin-right: 81px;
+    color: #666;
+    border-bottom: solid 1px #fff;
+    cursor: pointer;
+}
+.couponEmpty img {
+    display: block;
+    margin: 87px 0 0 370px;
+}
+.couponEmpty p {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 27px 0 40px 0;
+    text-align: center;
+    color: #999;
+}
+/* 底部 */
+.payCon-money {
+    width: 1080px;
+    padding: 20px 60px;
+    height: 50px;
+    background: #fff;
+    margin-top: 20px;
+    line-height: 50px;
+    /* z-index: 100; */
+}
+.payCon-ml {
+    float: left;
+    /* overflow: hidden; */
+}
+.payCon-ml p {
+    font-size: 14px;
+    color: #999;
+    float: left;
+    margin-right: 40px;
+}
+.payCon-ml p span {
+    color: #333;
+}
+.payCon-mr {
+    float: right;
+    line-height: 50px;
+    position: relative;
+}
+.payCon-mr p {
+    float: left;
+    font-size: 14px;
+    color: #999;
+    margin-right: 40px;
+    height: 50px;
+}
+.payCon-mr a {
+    display: block;
+    width: 110px;
+    height: 50px;
+    border-radius: 3px;
+    background: #fd6029;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    float: left;
+    /* transition: all ease .4s; */
+}
+
+.payCon-mr p span {
+    font-size: 26px;
+    color: #fd6029;
+}
+.payCon-mr p em {
+    color: #fd6029;
+    font-size: 14px;
+}
+.pay-ul {
+    display: none;
+    border-top: 1px solid #ddd;
+}
+.pay-ul li {
+    overflow: hidden;
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+    line-height: 20px;
+}
+li{
+	list-style: none;
+}
+.pay-ul li label {
+    float: left;
+}
+.pay-ul li p {
+    height: 20px;
+    line-height: 20px;
+}
+.pay-ul li label {
+    float: left;
+}
+.pay-ul li div {
+    float: left;
+}
+.pay-ul li div p {
+    padding-bottom: 4px;
+}
